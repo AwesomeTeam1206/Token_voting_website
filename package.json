@@ -4,40 +4,17 @@
   "description": "Coin Tracking Dapp",
   "private": true,
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bravehawk0101/Token_voting_website"
-  },
   "keywords": [
     "coin",
     "promoting",
-    "dapp",
-    "voting",
-    "blockchain",
-    "smart",
-    "contract",
-    "react",
-    "javascript",
-    "node",
-    "express",
-    "mongodb",
-    "sequelize",
-    "truffle",
-    "metamask",
-    "polygon",
-    "bsc",
-    "web3"
+    "dapp"
   ],
-  "bugs": {
-    "url": "https://github.com/bravehawk0101/Token_voting_website/issues"
-  },
-  "author": "drop5",
+  "author": "Lamoerey",
   "dependencies": {
     "body-parser": "^1.19.0",
     "bootstrap": "4.3.1",
     "chai": "4.2.0",
     "chalk": "^4.1.2",
-    "concurrently": "5.1.0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
@@ -96,17 +73,13 @@
     "web3": "^1.6.0",
     "webpack": "^4.44.0"
   },
-  "devDependencies": {
-    "nodemon": "^1.19.1",
-    "sequelize-cli": "^5.5.0"
-  },
   "scripts": {
-    "start": "concurrently  \"npm run  server\" \"react-scripts --openssl-legacy-provider start\"  --kill-others --kill-others-on-fail",
-    "start-server": "nodemon server/app.js  --watch server/*",
-    "test": "react-scripts  test",
-    "build": "node server/app.js  |  react-scripts --openssl-legacy-provider build",
-    "server": "node  server/app.js",
-    "eject": "react-scripts  eject"
+    "start": "npm run server | react-scripts --openssl-legacy-provider start",
+    "server": "node src/server/app.js",
+    "test": "react-scripts test",
+    "start-server": "nodemon server/app.js --watch server/*",
+    "build": "node server/app.js | react-scripts --openssl-legacy-provider build",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

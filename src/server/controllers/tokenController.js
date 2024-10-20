@@ -1,20 +1,13 @@
 const { Token } = require('../models');
 
 module.exports = {
-  list(req, res) {
-    Token.findAll({})
-      .then((tokens) =>
-        res.status(201).json({
-          error: false,
-          data: tokens,
-        })
-      )
-      .catch((error) =>
-        res.json({
-          error: true,
-          message: error,
-        })
-      );
+  async list(req, res) {
+    const response = await fetch('https://api.dexscreener.com/token-profiles/latest/v1', {
+      method: 'GET',
+      headers: {},
+    });
+    return response.json();
+    
   },
 
   add(req, res) {
